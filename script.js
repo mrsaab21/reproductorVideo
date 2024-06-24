@@ -58,14 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         controlVolumen.style.display = 'none';
     });
 
-    // Tooltip para la barra de volumen
-    const volumeControlLabel = document.getElementById('volume-label');
-    if (volumeControlLabel) {
-        const volumeTooltip = document.createElement('div');
-        volumeTooltip.classList.add('volume-tooltip');
-        volumeTooltip.textContent = 'Volumen';
-        volumeControlLabel.appendChild(volumeTooltip);
-    }
+
 
     // Control de velocidad de reproducción
     controlVelocidad.addEventListener('click', function () {
@@ -124,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const dataURL = canvas.toDataURL('image/png');
         const link = document.createElement('a');
         link.href = dataURL;
-        link.download = `${videoSource.src.split('/').pop().split('.')[0]}_${Math.floor(video.currentTime)}.png`;
+        link.download = 'captura.png';
         link.click();
     });
 
