@@ -28,19 +28,15 @@
                 Tu navegador no soporta el elemento <code>video</code>.
             </video>
             <div class="controls">
-                <div class="progress-bar-container">
-                    <input type="range" id="seek-bar" class="progress-bar" value="0" min="0" max="100" step="1">
-                    <div class="progress-bar-text">Arrastra para avanzar o retroceder</div>
-                </div>
                 <div class="control-label">
                     <button id="play-pause" class="control-button">►</button>
                 </div>
                 <div class="control-label">
                     <button id="mute" class="control-button">🔊</button>
                 </div>
-                <div class="control-label">
+                <div class="control-label" id="volume-label">
                     <button id="volume-button" class="control-button">Volumen</button>
-                    <input type="range" id="volume" class="control-slider vertical" min="0" max="100" value="100">
+                    <input type="range" id="volume" class="control-slider" min="0" max="100" value="100">
                 </div>
                 <div class="control-label">
                     <button id="speed-button" class="control-button">Velocidad</button>

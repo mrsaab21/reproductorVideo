@@ -3,7 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('chess.jpg'); 
+    background-image: url('chess.jpg'); /* Usa la imagen chess.jpg como fondo */
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -43,7 +43,7 @@ video {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: black;
+    background: black; /* Cambiado a completamente negro */
     padding: 10px;
     box-sizing: border-box;
     flex-wrap: wrap;
@@ -68,12 +68,13 @@ video {
     margin-left: 5px;
     -webkit-appearance: none;
     appearance: none;
-    background: linear-gradient(to right, #FF6347, #8B0000); /* Cambiado a horizontal */
+    background: linear-gradient(to right, #8B0000, #FF6347); /* De guinda a rojo claro */
     height: 10px;
     width: 100px;
     position: absolute;
-    bottom: 50px;
-    left: 10px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .control-slider.vertical {
@@ -169,7 +170,7 @@ video {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     flex-direction: column;
-    top: -150px;
+    top: -150px; /* Colocar las opciones arriba */
     left: 0;
     right: 0;
     margin: auto;
@@ -226,8 +227,7 @@ video {
 
 #volume {
     position: absolute;
-    display: none;
+    display: none; /* Ocultar por defecto */
     left: 0;
     bottom: 50px;
 }
-
