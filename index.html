@@ -9,7 +9,7 @@
 <body>
     <div class="header">
         <h1>Clases de Ajedrez para Principiantes</h1>
-        <p>Nombre Completo del Estudiante</p>
+        <p>Sergio Adrian Andujo Baeza</p>
         <p>Materia: Streaming en la Web</p>
         <p>Proyecto: Crear un reproductor de vídeo utilizando estándares web</p>
     </div>
@@ -17,20 +17,20 @@
         <div class="playlist">
             <label class="playlist-label">Lista de Reproducción:</label>
             <ul id="video-list">
-                <li class="video-item" data-src="unir.mp4" data-subtitles="SubtitulosVideo1.vtt" selected>Video 1</li>
-                <li class="video-item" data-src="otro-video.mp4" data-subtitles="SubtitulosVideo2.vtt">Video 2</li>
+                <li class="video-item" data-src="Video1.mp4" data-subtitles="SubtitulosVideo1.vtt" selected>Historia del ajedrez</li>
+                <li class="video-item" data-src="Video2.mp4" data-subtitles="SubtitulosVideo2.vtt">Cómo jugar al ajedrez</li>
             </ul>
         </div>
         <div class="video-container">
             <video id="video" width="600" height="400" controls>
-                <source id="video-source" src="unir.mp4" type="video/mp4">
+                <source id="video-source" src="Video1.mp4" type="video/mp4">
                 <track id="subtitles-track" kind="subtitles" srclang="es" label="Español" src="SubtitulosVideo1.vtt" default>
                 Tu navegador no soporta el elemento <code>video</code>.
             </video>
             <div class="controls">
                 <div class="progress-bar-container">
-                    <input type="range" id="seek-bar" class="progress-bar" min="0" max="100" value="0">
-                    <span class="progress-bar-text">Arrastra para retroceder o avanzar en el video</span>
+                    <input type="range" id="seek-bar" class="progress-bar" value="0" min="0" max="100" step="1">
+                    <div class="progress-bar-text">Arrastra para avanzar o retroceder</div>
                 </div>
                 <div class="control-label">
                     <button id="play-pause" class="control-button">►</button>
