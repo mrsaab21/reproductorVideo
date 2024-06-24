@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('chess.jpg'); /* Usa la imagen chess.jpg como fondo */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+.header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.video-container {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-left: 20px;
+}
+
+video {
+    display: block;
+}
+
+.controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black; /* Cambiado a completamente negro */
+    padding: 10px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.control-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 10px;
+    position: relative;
+}
+
+.control-button:hover {
+    color: #00adef;
+}
+
+.control-slider {
+    display: none; /* Ocultar por defecto */
+    margin-left: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(to right, #FF6347, #8B0000); /* De rojo claro a guinda */
+    height: 10px;
+    width: 100px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+}
+
+.control-slider.vertical {
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+}
+
+.control-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #00adef;
+    cursor: pointer;
+}
+
+.control-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #00adef;
+    cursor: pointer;
+}
+
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.progress-bar {
+    flex: 1;
+}
+
+.progress-bar-container:hover .progress-bar-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.progress-bar-text {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    transition: opacity 0.3s;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.control-label {
+    color: white;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.control-label:hover .volume-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.volume-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    transition: opacity 0.3s;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    flex-direction: column;
+    top: -150px; /* Colocar las opciones arriba */
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.control-button:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content button:hover {
+    background-color: #575757;
+}
+
+.playlist {
+    background: rgba(51, 51, 51, 0.9);
+    color: white;
+    padding: 10px;
+    width: 200px;
+    height: 400px;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.playlist-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#video-list {
+    list-style: none;
+    padding: 0;
+}
+
+.video-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.video-item:hover, .video-item[selected] {
+    background-color: #575757;
+}
+
+#volume {
+    position: absolute;
+    display: none; /* Ocultar por defecto */
+    left: 0;
+    bottom: 50px;
+}
